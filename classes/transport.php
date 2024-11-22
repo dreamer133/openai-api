@@ -3,9 +3,12 @@
 class Transport
 {
     private $url;
-    function __construct($url)
+    private $apiKey;
+
+    function __construct($url, $apiKey)
     {
         $this->url = $url;
+        $this->apiKey = $apiKey;
     }
 
     public function doRequest($data)
@@ -15,7 +18,7 @@ class Transport
         // Set up the request headers
         $headers = [
             'Content-Type: application/json',
-            'Authorization: ' . 'Bearer ' . Config::API_KEY,
+            'Authorization: ' . 'Bearer ' . $this->apiKey,
         ];
 
         // Set cURL options
