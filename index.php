@@ -2,6 +2,7 @@
 $mainPath = __DIR__ . '/';
 $classesDir = $mainPath . 'classes/';
 $functionsDir = $mainPath . 'functions/';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

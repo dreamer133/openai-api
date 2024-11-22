@@ -56,3 +56,4 @@ const showLoader = (show) => {
 function scrollToBottom(el) {
     el.scrollTop = el.scrollHeight;
 }
+

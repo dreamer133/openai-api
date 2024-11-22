@@ -5,6 +5,7 @@ function cleanStr($string)
    return preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
 }
 
+
 function getEnvVariable($name)
 {
    $ret = null;
