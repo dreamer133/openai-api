@@ -12,7 +12,10 @@ const sendRequest = () => {
             renderAnswer(data);
         })
     })
-
+    const answerDiv = document.querySelector("#answer");
+    answerDiv.append("\n\n");
+    answerDiv.append(textarea.value);
+    
     textarea.value = '';
 }
 
@@ -31,7 +34,6 @@ async function getData(question) {
 }
 
 const renderAnswer = (aiResponse) => {
-    //console.log(aiResponse);
     const answerDiv = document.querySelector("#answer");
 
     aiResponse.choices.map((choice) => {
