@@ -13,9 +13,12 @@ $mainPath = __DIR__ . '/';
 <body>
     <h2>Ask AI</h2>
     <div id="container">
+        <button onClick="startNewConversation()">Start new conversation from scratch</button>
         <textarea name="answer" id="answer" cols="30" rows="80"></textarea>
-        <p>Write your question to openAI</p>
-        <img src="img/Loading_2.gif" id="loader" />
+        <p>
+            Write your question to openAI
+            <img src="img/Loading_2.gif" id="loader" />
+        </p>        
         <textarea name="main" id="question" cols="30" rows="5"></textarea>
         <button onClick="sendRequest()">Send</button>
     </div>

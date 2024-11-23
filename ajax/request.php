@@ -12,7 +12,6 @@ $transport = new Transport(Config::URL, $apiKey);
 
 //todo create frontend (whatever) for determining context
 $contextId = 1;
-//DB::truncateMessages();
 //DB::insertMessage(1, 'system', 'You are the helphul assistent, answering in the style of a wise man');
 
 DB::insertMessage($contextId, 'user', $user_input);

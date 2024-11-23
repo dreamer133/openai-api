@@ -59,3 +59,16 @@ function scrollToBottom(el) {
     el.scrollTop = el.scrollHeight;
 }
 
+const startNewConversation = async () => {
+    const url = "ajax/start.php";
+    try {
+        const response = await fetch(url, {
+            method: "POST",
+            body: JSON.stringify({style: 'todo'})
+        });
+        return response;
+    } catch (error) {
+        console.error(error.message);
+        return error.message;
+    }
+}
