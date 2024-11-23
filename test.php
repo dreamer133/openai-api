@@ -1,3 +1,4 @@
+<pre>
 <?php
 require('includes.php');
 
@@ -7,5 +8,9 @@ require('includes.php');
 // print_r($messages);
 
 $api_key = getenv('API_KEY');
-
+echo '...';
 print_r($api_key);
+
+print_r(get_defined_vars());
+?>
+</pre>
