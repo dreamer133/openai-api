@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Conversaitons will be saved to PDO Sqlite3 database
+ * Class for keeping messages in PDO Sqlite3 database
  */
 class DB
 {
@@ -12,7 +12,6 @@ class DB
     {
         if (!self::$conn) {
             $path = 'sqlite:' . __DIR__ . '/../openai.db';
-            //echo $path;
             self::$conn = new PDO($path);
         }
 

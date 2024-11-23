@@ -10,9 +10,10 @@ $conn = DB::get_instance();
 
 $transport = new Transport(Config::URL, $apiKey);
 
+//todo create frontend (whatever) for determining context
+$contextId = 1;
 //DB::truncateMessages();
 //DB::insertMessage(1, 'system', 'You are the helphul assistent, answering in the style of a wise man');
-$contextId = 1;
 
 DB::insertMessage($contextId, 'user', $user_input);
 
@@ -43,7 +44,6 @@ $data = [
 ];
 
 $response = $transport->doRequest($data);
-
 $response_arr = json_decode($response);
 
 foreach($response_arr->choices as $choise) {
