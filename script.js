@@ -1,3 +1,10 @@
+document.querySelector('#question').addEventListener("keypress", e => {
+    if (e.key === "Enter" && !e.shiftKey) {
+        e.preventDefault();
+        sendRequest();
+    }    
+});
+
 const sendRequest = () => {
     showLoader(true);
     const textarea = document.querySelector("#question");

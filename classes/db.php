@@ -71,14 +71,4 @@ class DB
         return $ret;
     }
 
-    public static final function truncateMessages() {
-        global $conn;
-
-        $sql = "delete from messages";
-        $statement = $conn->prepare($sql);
-        $ret = $statement->execute();
-
-        return $ret;
-    }
-
 }
