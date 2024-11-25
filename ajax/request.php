@@ -8,7 +8,7 @@ $user_input = cleanStr($data['question']);
 
 $conn = DB::get_instance();
 
-$transport = new Transport(Config::URL, $apiKey);
+$transport = new Transport(Config::URL_CHAT_COMPLETIONS, $apiKey);
 
 //todo create frontend (whatever) for determining context
 $contextId = 1;
